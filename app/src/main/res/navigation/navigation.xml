@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/createAlumnFragment">
+
+    <fragment
+        android:id="@+id/createAlumnFragment"
+        android:name="com.finga.examen_alumnes.ui.CreateAlumnFragment"
+        android:label="CreateAlumnFragment"
+        tools:layout="@layout/fragment_create_alumn">
+        <action
+            android:id="@+id/action_createAlumnFragment_to_llistaAlumnesFragment"
+            app:destination="@id/llistaAlumnesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/llistaAlumnesFragment"
+        android:name="com.finga.examen_alumnes.ui.LlistaAlumnesFragment"
+        android:label="fragment_llista_alumnes"
+        tools:layout="@layout/fragment_llista_alumnes" >
+        <action
+            android:id="@+id/action_llistaAlumnesFragment_to_alumneInfoFragment"
+            app:destination="@id/alumneInfoFragment"
+            app:popUpTo="@id/llistaAlumnesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/alumneInfoFragment"
+        android:name="com.finga.examen_alumnes.ui.AlumneInfoFragment"
+        android:label="fragment_alumne_info"
+        tools:layout="@layout/fragment_alumne_info" />
+</navigation>
