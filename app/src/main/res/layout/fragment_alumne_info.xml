@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="100dp"
             android:text="Edat de l'alumne seleccionat: "
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="100dp"
             android:text="Nom"
             app:layout_constraintStart_toEndOf="@+id/txtNomInfo"
             app:layout_constraintTop_toTopOf="parent" />
@@ -33,19 +33,60 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="100dp"
             android:text="Nom de l'alumne seleccionat: "
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/txtNomInfo" />
 
         <TextView
             android:id="@+id/txtEdat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="100dp"
             android:text="Edat"
             app:layout_constraintStart_toEndOf="@+id/txtNomInfo"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/txtNom" />
+
+        <TextView
+            android:id="@+id/txtCpInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="100dp"
+            android:text="Codi postal de l'alumne seleccionat: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtEdatInfo" />
+
+        <TextView
+            android:id="@+id/txtCp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="100dp"
+            android:text="Codi Postal"
+            app:layout_constraintStart_toEndOf="@+id/txtCpInfo"
+            app:layout_constraintTop_toTopOf="@+id/txtEdat" />
+
+        <TextView
+            android:id="@+id/txtDescInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="100dp"
+            android:text="Informe acadèmic de l'alumne seleccionat: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtCpInfo" />
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Informe"
+
+            app:layout_constraintTop_toTopOf="@+id/txtDescInfo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

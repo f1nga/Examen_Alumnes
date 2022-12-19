@@ -62,6 +62,4 @@ class ListAlumnAdapter (
     override fun getItemCount(): Int {
         return dataset.size
     }
-
-
 }

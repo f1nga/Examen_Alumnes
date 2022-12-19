@@ -42,13 +42,14 @@ class CreateAlumnFragment : Fragment() {
                 .setCancelable(false)
                 .setPositiveButton("Sí") { _, _ ->
 
-                    var descAlumne = if (binding.inputDescripcioText.text.toString() != "")  binding.inputDescripcioText.text.toString() else "Descripció"
+                    var informeAlumne = if (binding.inputDescripcioText.text.toString() != "")  binding.inputDescripcioText.text.toString() else "Descripció"
+                    var codiPostalAlumne = if (binding.inputCodiText.text.toString() != "")  binding.inputCodiText.text.toString() else "0000"
 
                     var alumne = Alumne(
                         binding.inputNomText.text.toString(),
                         binding.inputEdatText.text.toString().toInt(),
-                        17430,
-                        descAlumne
+                        codiPostalAlumne.toInt(),
+                        informeAlumne
                     )
 
                     listAlumnes.addAlumne(alumne)
@@ -64,13 +65,6 @@ class CreateAlumnFragment : Fragment() {
         }
 
         binding.btnLlistar.setOnClickListener() {
-
-            val alumnesObserver = Observer<MutableList<Alumne>>{
-                Log.i("HOOOL", it.toString())
-            }
-
-            viewModel.getListaAlumnesLiveData().observe(viewLifecycleOwner, alumnesObserver)
-
             it.findNavController().navigate(R.id.action_createAlumnFragment_to_llistaAlumnesFragment)
         }
 

@@ -18,10 +18,7 @@ import com.finga.examen_alumnes.viewmodel.ListViewModel
 
 
 class CreateAlumnActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityCreateAlumnBinding
-    private val viewModel: ListViewModel by viewModels()
     private lateinit var drawerLayout: DrawerLayout
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

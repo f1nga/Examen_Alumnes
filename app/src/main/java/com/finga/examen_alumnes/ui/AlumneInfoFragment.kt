@@ -18,7 +18,6 @@ class AlumneInfoFragment : Fragment() {
 
     private val viewModel: ListViewModel by activityViewModels()
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentAlumneInfoBinding>(
@@ -28,6 +27,8 @@ class AlumneInfoFragment : Fragment() {
 
         binding.txtNom.text = viewModel.getAlumne()?.nom
         binding.txtEdat.text = viewModel.getAlumne()?.edat.toString()
+        binding.txtCp.text = viewModel.getAlumne()?.codiPostal.toString()
+        binding.txtDesc.text = viewModel.getAlumne()?.descripcio
 
         return binding.root
     }

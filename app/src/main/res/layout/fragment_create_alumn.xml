@@ -100,7 +100,7 @@
                 android:id="@+id/inputDescripcioText"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:hint="Descripció" />
+                android:hint="Informe acadèmica" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button

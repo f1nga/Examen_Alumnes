@@ -24,7 +24,7 @@ import com.finga.examen_alumnes.viewmodel.ListViewModel
 class LlistaAlumnesFragment : Fragment() {
     private val viewModel: ListViewModel by activityViewModels()
     lateinit var recyclerView: RecyclerView
-    lateinit var listAlumnAdapter: ListAlumnAdapter
+    private lateinit var listAlumnAdapter: ListAlumnAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -35,11 +35,9 @@ class LlistaAlumnesFragment : Fragment() {
 
         recyclerView = binding.RecyclerView
 
-
         val alumnesObserver = Observer<MutableList<Alumne>>{
-            Log.i("LLISTA", it.toString())
-
             listAlumnAdapter = ListAlumnAdapter(it)
+
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
             recyclerView.setHasFixedSize(true)
             recyclerView.adapter = listAlumnAdapter
@@ -54,9 +52,6 @@ class LlistaAlumnesFragment : Fragment() {
 
         viewModel.getListaAlumnesLiveData().observe(viewLifecycleOwner, alumnesObserver)
 
-
-
         return binding.root
-
     }
 }
